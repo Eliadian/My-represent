@@ -1,0 +1,76 @@
+body{
+    font-family: sans-serif;
+    color: #777777;
+    line-height: 26px;
+}
+.red_clr{
+    color: rgb(255 68 73);
+}
+.btn{
+    color: white;
+    background-color: rgb(254 129 126);
+    font-family: "Franklin Gothic Heavy";
+    font-size: 16px;
+    padding: 13px 42px;
+    border-radius: 20px;
+    text-decoration: none;
+    width: max-content;
+}
+h1{
+    font-size: 2.5em;
+}
+.experiences{
+    background-color: rgb(233 246 255);
+    padding: 30px;
+    margin: 30px;
+    border-radius: 15px;
+}
+.experience-item{
+    padding: 10px;
+    border-left: 1px solid rgba(137, 130, 247, .2);
+}
+.flex-container {
+    /*генерирует flex-контейнер уровня блока*/
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    align-items: flex-start;
+    /*border: 1px solid black;*/
+}
+.transform{
+    transform-style: preserve-3d;
+    perspective: 50px;
+    perspective-origin: 150%;
+    transform: rotate3d(0, 1, 1, 90deg);
+}
+.img-1{
+    -webkit-animation:spin 3s linear infinite;
+    -moz-animation:spin 3s linear infinite;
+    animation:rotate3d 3s linear infinite;
+}
+.img-2 {
+    overflow: hidden;
+    transition-duration: 1.8s;
+    transition-property: transform;
+}
+.img-2:hover{
+    transform: rotate3d(0, 0, 1, 360deg);
+    -webkit-transform: rotate3d(0, 0, 1, 360deg);
+}
+@-moz-keyframes rotate3d {
+    100% {
+        -moz-transform: rotate3d(0, 1, 0, 360deg);
+    }
+}
+@-webkit-keyframes rotate3d {
+    100% {
+        -webkit-transform: rotate3d(0, 1, 0, 360deg);
+    }
+}
+@keyframes rotate3d {
+    100% {
+        -webkit-transform: rotate3d(0, 1, 0, 360deg);
+        transform: rotate3d(0, 1, 0, 360deg);
+    }
+}
